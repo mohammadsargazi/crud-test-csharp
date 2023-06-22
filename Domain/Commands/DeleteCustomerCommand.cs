@@ -9,6 +9,10 @@ public class DeleteCustomerCommand : BaseCustomerCommand
     #endregion
 
     #region Ctor
+    public DeleteCustomerCommand()
+    {
+            
+    }
     public DeleteCustomerCommand(ICustomerRepository customerRepository, IMediator mediator)
     {
         _customerRepository = customerRepository;

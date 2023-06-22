@@ -9,6 +9,10 @@ public class RegisterNewCustomerCommand : BaseCustomerCommand
     #endregion
 
     #region Ctor
+    public RegisterNewCustomerCommand()
+    {
+            
+    }
     public RegisterNewCustomerCommand(ICustomerRepository customerRepository, IMediator mediator)
     {
         _customerRepository = customerRepository;

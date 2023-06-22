@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson.Serialization;
 using System.Reflection;
 using System.Text.Json.Serialization;
+using MediatR;
 
 namespace Mc2.CrudTest.Presentation.API.Configurations;
 
@@ -24,7 +25,7 @@ public static class BaseConfig
         // MongoDB
         builder.InitializeMongo();
 
-        builder.Services.AddMediatR(configuration => Assembly.GetExecutingAssembly());
+        builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
         builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
         builder.Services.AddEndpointsApiExplorer();

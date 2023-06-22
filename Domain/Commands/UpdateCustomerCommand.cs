@@ -9,6 +9,10 @@ public class UpdateCustomerCommand : BaseCustomerCommand
     #endregion
 
     #region Ctor
+    public UpdateCustomerCommand()
+    {
+            
+    }
     public UpdateCustomerCommand(ICustomerRepository customerRepository, IMediator mediator)
     {
         _customerRepository = customerRepository;
