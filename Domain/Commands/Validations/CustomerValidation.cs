@@ -7,7 +7,7 @@ namespace Domain.Commands.Validations
     {
         protected void ValidateId()
         {
-            RuleFor(s => s.ID).NotEmpty();
+            RuleFor(s => s.Id).NotEmpty();
         }
 
         protected void ValidateFirstname()
