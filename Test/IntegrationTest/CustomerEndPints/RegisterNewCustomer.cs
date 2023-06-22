@@ -1,7 +1,4 @@
-﻿using FluentAssertions;
-using Newtonsoft.Json;
-
-namespace IntegrationTest.CustomerEndPints;
+﻿namespace IntegrationTest.CustomerEndPints;
 
 public class RegisterNewCustomer : ControllerTestsBase
 {

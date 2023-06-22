@@ -7,3 +7,5 @@ global using Microsoft.Extensions.DependencyInjection;
 global using WebMotions.Fake.Authentication.JwtBearer;
 global using IntegrationTest.Base;
 global using IntegrationTests;
+global using FluentAssertions;
+global using Newtonsoft.Json;
