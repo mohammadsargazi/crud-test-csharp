@@ -6,7 +6,7 @@ It provides a set of CRUD (Create, Read, Update, Delete) operations for managing
 The system includes features such as storing customer details, performing validations, and integrating with external systems using MediatR and CQRS (Command Query Responsibility Segregation) patterns
 . Integration tests are also included to ensure the system's functionality.
 
-Project Structure
+### Project Structure
 The project follows a modular structure to adhere to DDD principles. Here is a brief overview of the main directories:
 
 - Domain: Contains the core domain models and business logic and commands used for CQRS.
