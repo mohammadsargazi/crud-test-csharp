@@ -1,4 +1,6 @@
-﻿using Bus;
+﻿using Application.Interfaces;
+using Application.Services;
+using Bus;
 using Data.Repository;
 using Domain.Commands;
 using Domain.Events;
@@ -14,7 +16,7 @@ public static class NativeInjectorBootStrapper
     public static void RegisterServices(IServiceCollection services)
     {
         #region Application
-        //services.AddScoped<ICustomerAppService, CustomerAppService>();
+        services.AddScoped<ICustomerAppService, CustomerAppService>();
         #endregion
 
         #region Domain
