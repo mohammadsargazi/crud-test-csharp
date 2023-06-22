@@ -17,17 +17,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationLayer", "Applica
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfrastructureLayer", "InfrastructureLayer", "{EA54BC08-69CF-41FF-A369-9D8A3A0C383D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{A9EFBFA8-7CF5-4AE9-A9EF-68D3C19DC51D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{A9EFBFA8-7CF5-4AE9-A9EF-68D3C19DC51D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bus", "Infrastructure\Bus\Bus.csproj", "{1B1DDF46-AFE3-45A8-AE3D-486099A35432}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bus", "Infrastructure\Bus\Bus.csproj", "{1B1DDF46-AFE3-45A8-AE3D-486099A35432}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Infrastructure\Data\Data.csproj", "{CEA2BB75-0B34-49BB-B613-71F0DC526A67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Infrastructure\Data\Data.csproj", "{CEA2BB75-0B34-49BB-B613-71F0DC526A67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoC", "Infrastructure\IoC\IoC.csproj", "{0E63C332-53CD-4550-97E4-6B7D286863E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoC", "Infrastructure\IoC\IoC.csproj", "{0E63C332-53CD-4550-97E4-6B7D286863E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{F5868AF2-F6C1-49DD-8D71-E38660799955}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{F5868AF2-F6C1-49DD-8D71-E38660799955}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Presentation.API", "Mc2.CrudTest.Presentation.API\Mc2.CrudTest.Presentation.API.csproj", "{0AC7608B-C630-48A5-8E24-371F25556D0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.Presentation.API", "Mc2.CrudTest.Presentation.API\Mc2.CrudTest.Presentation.API.csproj", "{0AC7608B-C630-48A5-8E24-371F25556D0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{5D3FB31A-2443-4E47-8447-B6E5C43FD2CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTest", "Test\IntegrationTest\IntegrationTest.csproj", "{7C673897-269A-453C-B909-F338C46512A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{0AC7608B-C630-48A5-8E24-371F25556D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AC7608B-C630-48A5-8E24-371F25556D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AC7608B-C630-48A5-8E24-371F25556D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C673897-269A-453C-B909-F338C46512A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C673897-269A-453C-B909-F338C46512A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C673897-269A-453C-B909-F338C46512A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C673897-269A-453C-B909-F338C46512A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +93,7 @@ Global
 		{CEA2BB75-0B34-49BB-B613-71F0DC526A67} = {EA54BC08-69CF-41FF-A369-9D8A3A0C383D}
 		{0E63C332-53CD-4550-97E4-6B7D286863E6} = {EA54BC08-69CF-41FF-A369-9D8A3A0C383D}
 		{F5868AF2-F6C1-49DD-8D71-E38660799955} = {B5BE6E89-40D8-4ABA-82EE-9D25F8364E83}
+		{7C673897-269A-453C-B909-F338C46512A5} = {5D3FB31A-2443-4E47-8447-B6E5C43FD2CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B5A26C9-68C1-49D9-9F32-AF907A1730C2}
