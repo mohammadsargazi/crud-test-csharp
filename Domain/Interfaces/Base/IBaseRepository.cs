@@ -1,7 +1,6 @@
 ﻿namespace Domain.Interfaces.Base;
 public interface IBaseRepository<T> where T : BaseEntity
 {
-    Task<List<T>> GetAll();
     Task<PagedData<T>> GetAll(int skip, int limit, CancellationToken cancellationToken);
     Task<T> GetById(string id, CancellationToken cancellationToken);
     Task<T> InsertAsync(T entity,CancellationToken cancellationToken);
