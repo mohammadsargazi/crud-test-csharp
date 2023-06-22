@@ -6,7 +6,7 @@ namespace Domain.Commands;
 
 public class BaseCustomerCommand : IRequest<Result>
 {
-    public Guid ID { get; protected set; }
+    public string Id { get; protected set; }
     public string Firstname { get; protected set; }
     public string Lastname { get; protected set; }
     public DateTimeOffset? DateOfBirth { get; protected set; }
