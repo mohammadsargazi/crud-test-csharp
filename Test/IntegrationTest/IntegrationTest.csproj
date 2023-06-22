@@ -30,8 +30,4 @@
     <ProjectReference Include="..\..\Mc2.CrudTest.Presentation.API\Mc2.CrudTest.Presentation.API.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Customer\" />
-  </ItemGroup>
-
 </Project>

@@ -15,8 +15,11 @@ namespace Mc2.CrudTest.Presentation.API.Controllers.Base
             if (IsOperationValid())
             {
                 result.FailedResults = new ValidationResult();
-                if (result.SucceedResult != null)
-                    return Ok(result.SucceedResult);
+#if DEBUG
+                return Ok(result);
+#endif
+                return Ok(result.SucceedResult);
+
             }
 
             return BadRequest(new ValidationProblemDetails(new Dictionary<string, string[]>

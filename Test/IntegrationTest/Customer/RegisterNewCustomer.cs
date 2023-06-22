@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace IntegrationTest.CustomerEndPints;
 
-public class RegisterNewCustomer: ControllerTestsBase
+public class RegisterNewCustomer : ControllerTestsBase
 {
     public RegisterNewCustomer(WebApiTesterFactory factory) : base(factory) { }
 
@@ -14,10 +14,10 @@ public class RegisterNewCustomer: ControllerTestsBase
         {
             Firstname = Fixture.Create<string>(),
             Lastname = Fixture.Create<string>(),
-            Email = "email@example.com",
+            Email = Fixture.Create<string>() +"@example.com",
             DateOfBirth = Fixture.Create<DateTimeOffset>(),
             BankAccountNumber = Fixture.Create<string>(),
-            PhoneNumber = "+1234567890"
+            PhoneNumber = "+31 (6) 12345678"
         };
     }
     #endregion
@@ -26,12 +26,13 @@ public class RegisterNewCustomer: ControllerTestsBase
     public async Task test_RegisterNewCustomer_Success()
     {
         var customerApi = new CustomerAPI(BaseUrl, WebClient);
-        
+
         var registreNewCustomerRes = await customerApi.RegisternewcustomerAsync(GetRegisterNewCustomerCommandViewModel());
-        
+
         registreNewCustomerRes.Should().NotBeNull();
-        
-        var customerViewModel = JsonConvert.DeserializeObject<CustomerViewModel>(registreNewCustomerRes.SucceedResult.ToString());
+
+        var customerViewModel = JsonConvert.DeserializeObject<CustomerViewModel>(
+            JsonConvert.SerializeObject(registreNewCustomerRes.SucceedResult));
         var getdata = await customerApi.CustomerGETAsync(customerViewModel.Id);
         getdata.Should().NotBeNull();
     }

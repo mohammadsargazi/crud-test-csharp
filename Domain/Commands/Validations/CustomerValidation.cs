@@ -36,7 +36,7 @@ namespace Domain.Commands.Validations
             PhoneNumberUtil phoneNumberUtil = PhoneNumberUtil.GetInstance();
             PhoneNumber parsedPhoneNumber = phoneNumberUtil.Parse(phoneNumber, null);
 
-            return phoneNumberUtil.IsValidNumberForRegion(parsedPhoneNumber, "US") &&
+            return phoneNumberUtil.IsValidNumberForRegion(parsedPhoneNumber, "NL") &&
                    phoneNumberUtil.GetNumberType(parsedPhoneNumber) == PhoneNumberType.MOBILE;
         }
 
