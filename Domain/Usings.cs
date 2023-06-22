@@ -3,3 +3,7 @@ global using Domain.Entities;
 global using Domain.Extensions;
 global using Domain.ResultModel;
 global using MediatR;
+global using Domain.Entities.Base;
+global using Domain.Interfaces;
+global using Domain.Commands.Validations;
+global using Domain.Events;

@@ -1,4 +1,6 @@
-﻿namespace Domain.Extensions;
+﻿using Domain.ResultModel;
+
+namespace Domain.Extensions;
 
 public static class PagedDataExtensions
 {
