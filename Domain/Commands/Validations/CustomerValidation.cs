@@ -31,12 +31,13 @@ namespace Domain.Commands.Validations
                 .Must(BeValidMobileNumber).WithMessage("Invalid mobile number");
         }
 
-        private bool BeValidMobileNumber(string phoneNumber)
+        public bool BeValidMobileNumber(string phoneNumber)
         {
             PhoneNumberUtil phoneNumberUtil = PhoneNumberUtil.GetInstance();
             PhoneNumber parsedPhoneNumber = phoneNumberUtil.Parse(phoneNumber, null);
 
-            return phoneNumberUtil.IsValidNumberForRegion(parsedPhoneNumber, "NL") &&
+            string countryCode = phoneNumberUtil.GetRegionCodeForNumber(parsedPhoneNumber);
+            return phoneNumberUtil.IsValidNumberForRegion(parsedPhoneNumber, countryCode) &&
                    phoneNumberUtil.GetNumberType(parsedPhoneNumber) == PhoneNumberType.MOBILE;
         }
 
