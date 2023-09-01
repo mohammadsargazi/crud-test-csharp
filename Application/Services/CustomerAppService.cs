@@ -36,7 +36,7 @@ public class CustomerAppService : ICustomerAppService
     {
         return _mapper.Map<CustomerViewModel>(await _customerRepository.GetById(id, cancellationToken));
     }
-
+        
     public async Task<ResultViewModel> Insert(RegisterNewCustomerCommandViewModel commandViewModel, CancellationToken cancellationToken)
     {
         var command = _mapper.Map<RegisterNewCustomerCommand>(commandViewModel);
