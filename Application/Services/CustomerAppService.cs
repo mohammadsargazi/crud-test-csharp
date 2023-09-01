@@ -43,7 +43,7 @@ public class CustomerAppService : ICustomerAppService
         var res = await _mediator.Send(command);
         return new ResultViewModel() { SucceedResult = _mapper.Map<CustomerViewModel>(res.SucceedResult), FailedResults = res.FailedResults };
     }
-
+     
     public async Task<ResultViewModel> Update(UpdateCustomerCommandViewModel commandViewModel, CancellationToken cancellationToken)
     {
         var command = _mapper.Map<UpdateCustomerCommand>(commandViewModel);
