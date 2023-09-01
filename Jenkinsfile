@@ -1,23 +1,30 @@
 pipeline {
     agent any
-
+    
     stages {
         stage('Checkout') {
             steps {
                 checkout scm
             }
         }
-
+        
         stage('Build') {
             steps {
-                script {
-                    // Use the installed .NET Core SDK to restore and build the project
-                    sh "dotnet restore"
-                    sh "dotnet build MyDotNetApp.sln"
-                }
+                bat "dotnet restore"
+                bat "dotnet build"
             }
         }
         
-     
+        stage('Test') {
+            steps {
+                bat "dotnet test"
+            }
+        }
+        
+        stage('Publish') {
+            steps {
+                bat "dotnet publish -c Release -o ./publish"
+            }
+        }
     }
 }
