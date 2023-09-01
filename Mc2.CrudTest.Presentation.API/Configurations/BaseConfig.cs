@@ -17,7 +17,7 @@ public static class BaseConfig
                        .AddJsonFile("appsettings.json", true, true)
                        .AddJsonFile($"appsettings.{env}.json", true);
 
-        BsonSerializer.RegisterSerializer(DateTimeSerializer.LocalInstance);
+        //BsonSerializer.RegisterSerializer(DateTimeSerializer.LocalInstance);
 
         builder.Logging.ClearProviders();
 

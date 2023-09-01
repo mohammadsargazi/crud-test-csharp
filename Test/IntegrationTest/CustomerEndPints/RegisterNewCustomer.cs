@@ -12,7 +12,7 @@ public class RegisterNewCustomer : ControllerTestsBase
             Firstname = Fixture.Create<string>(),
             Lastname = Fixture.Create<string>(),
             Email = Fixture.Create<string>() +"@example.com",
-            DateOfBirth = Fixture.Create<DateTimeOffset>(),
+            DateOfBirth = Fixture.Create<DateTime>(),
             BankAccountNumber = Fixture.Create<string>(),
             PhoneNumber = "+31 (6) 12345678"
         };
